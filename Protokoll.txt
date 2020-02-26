@@ -1,3 +1,4 @@
 Mittwoch, 26.02.2020
 Vorgehensmodelle: Einigung auf Kanban mit Elementen von Scrum und Spiralmodell (u.a. Daily Meetings, wiederholtes Testen),
-	Begründung der Wahl des Vorgehensmodells, Abwägung durch Aufzählung von Pro und Contra Argumenten
+	Begründung der Wahl des Vorgehensmodells, Abwägung durch Aufzählung von Pro und Contra Argumenten.
+Gitrepo erstellt, digitales Kanbanboard mit "Trello" erstellt

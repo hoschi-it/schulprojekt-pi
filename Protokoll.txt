@@ -5,3 +5,4 @@ Gitrepo erstellen, digitales Kanbanboard mit "Trello" erstellen und Aufgaben fes
 
 Donnerstag, 27.02.2020
 LF 11: Herunterladen und Einrichten von Xamarin zur Entwicklung der Projektapp mit .NET Framework
+Erstellung des ER-Diagramm und Relationenmodells. Anlegen der DB in phpmyAdmin.

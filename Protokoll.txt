@@ -1,3 +1,11 @@
 Mittwoch, 26.02.2020
 Vorgehensmodelle: Einigung auf Kanban mit Elementen von Scrum und Spiralmodell (u.a. Daily Meetings, wiederholtes Testen),
-	Begründung der Wahl des Vorgehensmodells, Abwägung durch Aufzählung von Pro und Contra Argumenten
+	Begründung der Wahl des Vorgehensmodells, Abwägung durch Aufzählung von Pro und Contra Argumenten.
+Gitrepo erstellen, digitales Kanbanboard mit "Trello" erstellen und Aufgaben festlegen.
+
+Donnerstag, 27.02.2020
+LF 11: Herunterladen und Einrichten von Xamarin zur Entwicklung der Projektapp mit .NET Framework
+Erstellung des ER-Diagramm und Relationenmodells. Anlegen der DB in phpmyAdmin.
+
+Freitag, 28.02.2020
+Anlegen der DB in phpmyAdmin, Füllen der Datenbank mit Beispieldaten

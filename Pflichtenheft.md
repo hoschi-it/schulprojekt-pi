@@ -2,45 +2,31 @@ Work-in-progress
 
 # Pflichtenheft
 
-## Zielbestimmungen
-
-### Muss-Kriterien
-### Wunsch-Kriterien
-### Abgrenzungs-Kriterien
-
 ## Einsatz
-### Zielgruppen
-### Anwendungsbereiche
-### Betriebsbedingungen
 
-## Produktübersicht
-Geschäftsprozesse und Akteure
+### Zielgruppen
+Mitarbeiter des Dienstleisters GoOnline
+
+### Anwendungsbereiche
+Verwendung von verschiedenen Standorten der Kunden 
+aus
 
 ## Funktionen
-Erklärung aller Anwendungsfälle
+**Erklärung aller Anwendungsfälle**
+
 
 ## Leistungen
-Anfoderungen an die Funktionen
-- Ausführzeit
+Anforderungen an die Funktionen
+- Ausführungszeit
 - Genauigkeit
-- Datentransfervolumen
-- Datentransferdauer
+- Datentransfer-Volumen
+- Datentransfer-Dauer
 
 ## Qualitätsanforderungen
-Qualitätsmerkmalen je eine Qualitätsstufe zuordnen
-
-## Benutzeroberfläche
-- Art des Layouts
-- Dialogstruktur
-- Zugriffsrechte
-
-## Sonstige Anforderungen
-- Dokumentation
-- Buchführung
-- Sicherheitsanforderungen
+**Qualitätsmerkmalen je eine Qualitätsstufe zuordnen**
 
 ## Technisches Umfeld
-folgende Geräte im selben Netzwerk
+In Reichweite des Netzwerkes einzurichten sind:
 
 - SQL Server
 - PHP Server

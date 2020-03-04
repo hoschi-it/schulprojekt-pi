@@ -1,5 +1,5 @@
 Work-in-progress
-[useCaseDiagram]: ./UML/UseCase_AndroidApp.png "Logo Title Text 2"
+
 # Pflichtenheft
 
 ## Einsatz
@@ -12,7 +12,7 @@ Verwendung von verschiedenen Standorten der Kunden
 aus
 
 ## Funktionen
-![Usecase Diagram of the App][useCaseDiagram]
+![Usecase Diagram of the App](./UML/UseCase_AndroidApp.png) "Logo Title Text 2"
 
 ## Leistungen
 Anforderungen an die Funktionen

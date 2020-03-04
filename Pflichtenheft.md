@@ -2,45 +2,31 @@ Work-in-progress
 
 # Pflichtenheft
 
-## Zielbestimmungen
-
-### Muss-Kriterien
-### Wunsch-Kriterien
-### Abgrenzungs-Kriterien
-
 ## Einsatz
-### Zielgruppen
-### Anwendungsbereiche
-### Betriebsbedingungen
 
-## Produktübersicht
-Geschäftsprozesse und Akteure
+### Zielgruppen
+Mitarbeiter des Dienstleisters GoOnline
+
+### Anwendungsbereiche
+Verwendung von verschiedenen Standorten der Kunden 
+aus
 
 ## Funktionen
-Erklärung aller Anwendungsfälle
+![Usecase Diagram of the App](./UML/UseCase_AndroidApp.png) 
+"Anwendungsfälle der Android App in Verbindung mit der SQL Datenbank"
 
 ## Leistungen
-Anfoderungen an die Funktionen
-- Ausführzeit
+Anforderungen an die Funktionen
+- Ausführungszeit
 - Genauigkeit
-- Datentransfervolumen
-- Datentransferdauer
+- Datentransfer-Volumen
+- Datentransfer-Dauer
 
 ## Qualitätsanforderungen
-Qualitätsmerkmalen je eine Qualitätsstufe zuordnen
-
-## Benutzeroberfläche
-- Art des Layouts
-- Dialogstruktur
-- Zugriffsrechte
-
-## Sonstige Anforderungen
-- Dokumentation
-- Buchführung
-- Sicherheitsanforderungen
+**Qualitätsmerkmalen je eine Qualitätsstufe zuordnen**
 
 ## Technisches Umfeld
-folgende Geräte im selben Netzwerk
+In Reichweite des Netzwerkes einzurichten sind:
 
 - SQL Server
 - PHP Server

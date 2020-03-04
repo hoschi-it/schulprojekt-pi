@@ -12,7 +12,8 @@ Verwendung von verschiedenen Standorten der Kunden
 aus
 
 ## Funktionen
-![Usecase Diagram of the App](./UML/UseCase_AndroidApp.png) "Logo Title Text 2"
+![Usecase Diagram of the App](./UML/UseCase_AndroidApp.png) 
+"Anwendungsfälle der Android App in Verbindung mit der SQL Datenbank"
 
 ## Leistungen
 Anforderungen an die Funktionen

@@ -1,5 +1,5 @@
 <?php
-require_once("dbcontroller.php");
+require_once("dbcontroller/dbcontroller.php");
 /*
 A domain Class to demonstrate RESTful web services
 */

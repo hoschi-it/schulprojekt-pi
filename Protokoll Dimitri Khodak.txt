@@ -9,3 +9,10 @@ Erstellung des ER-Diagramm und Relationenmodells. Anlegen der DB in phpmyAdmin.
 
 Freitag, 28.02.2020
 Anlegen der DB in phpmyAdmin, Füllen der Datenbank mit Beispieldaten
+
+Montag, 02.03.2020
+Kurzeinweisung von neuem Gruppenmitglied, Erstellen der PHP-Dateien und Beschaffung und Aneignung von Grundlagenwissen zu PHP
+
+Dienstag, 03.03.2020
+Testen der PHP-Dateien, Herunterladen der notwendigen Bibliotheken bei Github
+Verbesserung der Datenbank um Attribute "Passwort" und "E-Mail"

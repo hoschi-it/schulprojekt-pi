@@ -13,7 +13,6 @@ Verwendung von verschiedenen Standorten der Kunden von GoOnline aus
 ## Funktionen
 ![Usecase Diagram of the App](./UML/UseCase_AndroidApp.png)"Anwendungsfälle der Android App in Verbindung mit der SQL Datenbank"
 
-
 ## Leistungen
 Anforderungen an die Funktionen
 - Ausführungszeit
@@ -78,4 +77,3 @@ In Reichweite des Netzwerkes einzurichten sind:
 ## Ergänzungen
 
 ## Tests
-

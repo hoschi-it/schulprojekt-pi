@@ -18,4 +18,7 @@ Testen der PHP-Dateien, Herunterladen der notwendigen Bibliotheken bei Github
 Verbesserung der Datenbank um Attribute "Passwort" und "E-Mail"
 
 Mittwoch, 04.03.2020
-Erstellen des Kostenanalyseplans
+Erstellen des Kostenanalyseplans: Festlegen der Kostenarten, Schätzung der Kostenhöhen
+
+Donnerstag, 05.03.2020
+Versuch Smartphone und Notebook als localhost zu verbinden. Erstellung von API-Funktionen zum Zugriff von mobilen App

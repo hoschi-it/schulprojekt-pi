@@ -8,12 +8,10 @@ Work-in-progress
 Mitarbeiter des Dienstleisters GoOnline
 
 ### Anwendungsbereiche
-Verwendung von verschiedenen Standorten der Kunden 
-aus
+Verwendung von verschiedenen Standorten der Kunden von GoOnline aus
 
 ## Funktionen
-**Erklärung aller Anwendungsfälle**
-
+![Usecase Diagram of the App](./UML/UseCase_AndroidApp.png)"Anwendungsfälle der Android App in Verbindung mit der SQL Datenbank"
 
 ## Leistungen
 Anforderungen an die Funktionen
@@ -24,6 +22,45 @@ Anforderungen an die Funktionen
 
 ## Qualitätsanforderungen
 **Qualitätsmerkmalen je eine Qualitätsstufe zuordnen**
+
+### Funktionalität
+|                       | sehr gut | gut | normal | nicht relevant |
+|-----------------------|----------|-----|--------|----------------|
+| **Funktionalität**    |          |     |        |                |
+| Angemessenheit        |          |     | x      |                |
+| Sicherheit            |          |     | x      |                |
+| Interopabilität       |          |     |        | x              |
+| Konformität           |          |     | x      |                |
+| Ordnungsmäßigkeit     |          |     | x      |                |
+| Richtigkeit           | x        |     |        |                |
+| **Benutzbarkeit**     |          |     |        |                |
+| Attraktivität         |          |     |        | x              |
+| Bedienbarkeit         |          | x   |        |                |
+| Erlernbarkeit         |          | x   |        |                |
+| Konformität           |          |     |        | x              |
+| Verständlichkeit      |          | x   |        |                |
+| **Zuverlässigkeit**   |          |     |        |                |
+| Fehlertoleranz        |          |     | x      |                |
+| Konformität           |          |     |        | x              |
+| Reife                 | x        |     |        |                |
+| Wiederherstellbarkeit |          | x   |        |                |
+| **Übertragbarkeit**   |          |     |        |                |
+| Anpassbarkeit         |          |     |        | x              |
+| Austauschbarkeit      |          |     |        | x              |
+| Installierbarkeit     |          | x   |        |                |
+| Koexistenz            |          |     |        | x              |
+| Konformität           |          |     |        | x              |
+| **Effizienz**         |          |     |        |                |
+| Konformität           |          |     |        | x              |
+| Zeitverhalten         |          | x   |        |                |
+| Verbrauchsverhalten   |          |     | x      |                |
+| **Wartbarkeit**       |          |     |        |                |
+| Analysierbarkeit      |          |     | x      |                |
+| Konformität           |          |     |        | x              |
+| Modifizierbarkeit     |          |     | x      |                |
+| Stabilität            | x        |     |        |                |
+| Testbarkeit           |          | x   |        |                |
+
 
 ## Technisches Umfeld
 In Reichweite des Netzwerkes einzurichten sind:

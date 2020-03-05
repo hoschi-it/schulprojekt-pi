@@ -16,3 +16,6 @@ Kurzeinweisung von neuem Gruppenmitglied, Erstellen der PHP-Dateien und Beschaff
 Dienstag, 03.03.2020
 Testen der PHP-Dateien, Herunterladen der notwendigen Bibliotheken bei Github
 Verbesserung der Datenbank um Attribute "Passwort" und "E-Mail"
+
+Mittwoch, 04.03.2020
+Erstellen des Kostenanalyseplans

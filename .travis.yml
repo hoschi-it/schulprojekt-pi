@@ -1,0 +1,7 @@
+env:
+  global:
+  - 'FTP_USER=matse_gitci'
+  - 'FTP_PASSWORD=5ch0019r0j3c7'
+  - 'FTP_URL=matse.bplaced.com/www'
+after_success:
+- echo "success"

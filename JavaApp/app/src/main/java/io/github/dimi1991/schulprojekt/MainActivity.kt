@@ -7,6 +7,7 @@ import android.widget.TableRow
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
+import io.github.dimi1991.schulprojekt.Controller.DataProvider
 import io.github.dimi1991.schulprojekt.Model.Device
 import io.github.dimi1991.schulprojekt.Model.Location
 import kotlinx.android.synthetic.main.activity_main.*
@@ -48,14 +49,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun loadTable(){
-        var devs = listOf<Device>(
+        var url = "https://4b3aed5b-8e45-42a4-af81-64863036e153.mock.pstmn.io"
+        var provider = DataProvider(url)
+
+/*        var devs = listOf<Device>(
             Device("FritzBox 12340", GregorianCalendar(2020, 20, 2), Location("Buxtehude")),
             Device("Switch X", GregorianCalendar(2019, 7, 17), Location("Prag"))
-        )
+        )*/
+        var devs = provider.getAllDevices()
         makeRows(devs)
     }
 
-    fun makeRows(devices: List<Device>) {
+    fun makeRows(devices: Array<Device>) {
         for(device in devices) {
             val tvDeviceName = generateTextView(device.Name)
             val tvNextMaintenance = generateTextView(device.NextMaintenanceString())

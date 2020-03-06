@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
         makeRows(devices)
     }
 
-    fun makeRows(devices: Array<Device>) {
+    fun makeRows(devices: List<Device>) {
         for(device in devices) {
             val tvDeviceName = generateTextView(device.Name)
             val tvNextMaintenance = generateTextView(device.NextMaintenanceString())

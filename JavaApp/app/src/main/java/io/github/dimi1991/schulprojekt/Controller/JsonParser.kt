@@ -7,12 +7,15 @@ import java.security.InvalidParameterException
 public class JsonParser {
     private val gson = Gson()
 
-    public fun parseDevices(json: String): Array<Device> {
+    public fun parseDevices(json: String): List<Device> {
         var array = gson.fromJson<Array<Device>>(json, Array<Device>::class.java)
         if(array == null){
             throw InvalidParameterException()
         }
-        return array
+
+        return array.filter {
+            d -> d.Location != null && d.Name != null
+        }
     }
 
     public fun parseDevice(json: String): Device {

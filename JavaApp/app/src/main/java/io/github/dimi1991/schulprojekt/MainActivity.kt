@@ -12,6 +12,7 @@ import io.github.dimi1991.schulprojekt.Model.Device
 import io.github.dimi1991.schulprojekt.Model.Location
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.devicelist.*
+import kotlinx.coroutines.*
 import java.util.*
 
 
@@ -45,10 +46,12 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        loadTable()
+        GlobalScope.launch {
+            loadTable()
+        }
     }
 
-    private fun loadTable(){
+    private suspend fun loadTable(){
         var url = "https://4b3aed5b-8e45-42a4-af81-64863036e153.mock.pstmn.io"
         var provider = DataProvider(url)
 
@@ -56,8 +59,9 @@ class MainActivity : AppCompatActivity() {
             Device("FritzBox 12340", GregorianCalendar(2020, 20, 2), Location("Buxtehude")),
             Device("Switch X", GregorianCalendar(2019, 7, 17), Location("Prag"))
         )*/
-        var devs = provider.getAllDevices()
-        makeRows(devs)
+        val job = GlobalScope.async { provider.getAllDevices() }
+        val devices = job.await()
+        makeRows(devices)
     }
 
     fun makeRows(devices: Array<Device>) {

@@ -11,11 +11,6 @@ class Device(
 
     fun NextMaintenanceString(): String {
         val format = SimpleDateFormat("yyyy-MM-dd")
-
-        val year = _nextMaintenance.get(Calendar.YEAR)
-        val month = _nextMaintenance.get(Calendar.MONTH)
-        val day = _nextMaintenance.get(Calendar.DAY_OF_MONTH)
         return format.format(_nextMaintenance.time)
     }
-
 }

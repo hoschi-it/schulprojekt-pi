@@ -1,17 +1,24 @@
 package io.github.dimi1991.schulprojekt
 
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.util.AttributeSet
 import android.util.Xml
 import android.view.Menu
 import android.view.MenuItem
+import android.view.ViewGroup
 import android.widget.TableRow
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.children
 import com.google.android.material.snackbar.Snackbar
 import io.github.dimi1991.schulprojekt.Model.Device
+import io.github.dimi1991.schulprojekt.Model.Location
+import io.github.dimi1991.schulprojekt.View.DeviceTable
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.content_main.*
 import org.xmlpull.v1.XmlPullParser
+import java.util.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -43,26 +50,48 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun appendToTable(devices: List<Device>){
-        for(dev in devices){
-           /* var row = TableRow(this.applicationContext)
-            row.layoutParams.height = TableRow.LayoutParams.MATCH_PARENT
-            row.layoutParams.width = TableRow.LayoutParams.MATCH_PARENT
+    override fun onResume() {
+        super.onResume()
+        testTable()
+    }
 
-            /*
-            <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="10"
-                        android:text="Nächste Wartung"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
-             */
-            val parser: XmlPullParser = resources.getXml(@attr.)
-            val attributes = Xml.asAttributeSet(parser)
-            var attributeSet = AttributeSet.let()
-            var textTemplate = TextView(this.applicationContext)
-            textTemplate.layout.width = 3
-*/
+    private fun testTable(){
+        label.text = "_"
+        var devs = listOf<Device>(
+            Device("FritzBox 12340", Date(2020, 20, 2), Location("Buxtehude"))
+        )
+        MakeRows(devs)
+        label.text = label.text.toString() + "-"
+    }
+
+
+
+    fun MakeRows(devices: List<Device>) {
+        setContentView(R.layout.activity_main)
+        for(dev in devices) {
+            generateRow(dev)
         }
+    }
+
+    private fun generateRow(device: Device) {
+        val tvDeviceName = generateTextView(device.Name)
+        val tvNextMaintenance = generateTextView(device.NextMaintenanceString())
+        val tvCity = generateTextView(device.Location.City)
+        var row = TableRow(devicesTable.context)
+        row.addView(tvDeviceName)
+        row.addView(tvNextMaintenance)
+        row.addView(tvCity)
+
+
+        devicesTable.addView(generateTextView("test"), 1)
+        devicesTable.addView(row, 2)
+    }
+
+    private fun generateTextView(text: String) : TextView {
+        var view = TextView(this)
+        view.layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+        view.setPadding(10, 10, 10, 10)
+        view.text = text
+        return view
     }
 }

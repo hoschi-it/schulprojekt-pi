@@ -17,11 +17,38 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
-            <include layout="@layout/content_devlist" />
+                <TableLayout
+                    android:id="@+id/devicesTable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
+                        <TextView
+                            android:id="@+id/label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gerät"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nächste Wartung"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Stadt"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+                    </TableRow>
+
+                </TableLayout>
         </LinearLayout>
     </ScrollView>
 

@@ -10,7 +10,7 @@ import com.google.android.material.snackbar.Snackbar
 import io.github.dimi1991.schulprojekt.Model.Device
 import io.github.dimi1991.schulprojekt.Model.Location
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.content_main.*
+import kotlinx.android.synthetic.main.devicelist.*
 import java.util.*
 
 
@@ -49,8 +49,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun loadTable(){
         var devs = listOf<Device>(
-            Device("FritzBox 12340", Date(2020, 20, 2), Location("Buxtehude")),
-            Device("Switch X", Date(2019, 7, 17), Location("Prag"))
+            Device("FritzBox 12340", GregorianCalendar(2020, 20, 2), Location("Buxtehude")),
+            Device("Switch X", GregorianCalendar(2019, 7, 17), Location("Prag"))
         )
         makeRows(devs)
     }

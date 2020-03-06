@@ -52,10 +52,10 @@ class MainActivity : AppCompatActivity() {
             Device("FritzBox 12340", Date(2020, 20, 2), Location("Buxtehude")),
             Device("Switch X", Date(2019, 7, 17), Location("Prag"))
         )
-        MakeRows(devs)
+        makeRows(devs)
     }
 
-    fun MakeRows(devices: List<Device>) {
+    fun makeRows(devices: List<Device>) {
         for(device in devices) {
             val tvDeviceName = generateTextView(device.Name)
             val tvNextMaintenance = generateTextView(device.NextMaintenanceString())

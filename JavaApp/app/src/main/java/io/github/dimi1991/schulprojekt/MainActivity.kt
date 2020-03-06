@@ -27,7 +27,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
-
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
@@ -52,22 +51,20 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        testTable()
+        loadTable()
     }
 
-    private fun testTable(){
-        label.text = "_"
+    private fun loadTable(){
         var devs = listOf<Device>(
-            Device("FritzBox 12340", Date(2020, 20, 2), Location("Buxtehude"))
+            Device("FritzBox 12340", Date(2020, 20, 2), Location("Buxtehude")),
+            Device("Switch X", Date(2019, 7, 17), Location("Prag"))
         )
         MakeRows(devs)
-        label.text = label.text.toString() + "-"
     }
 
 
 
     fun MakeRows(devices: List<Device>) {
-        setContentView(R.layout.activity_main)
         for(dev in devices) {
             generateRow(dev)
         }
@@ -82,14 +79,12 @@ class MainActivity : AppCompatActivity() {
         row.addView(tvNextMaintenance)
         row.addView(tvCity)
 
+        devicesTable.addView(row, TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT))
 
-        devicesTable.addView(generateTextView("test"), 1)
-        devicesTable.addView(row, 2)
     }
 
     private fun generateTextView(text: String) : TextView {
         var view = TextView(this)
-        view.layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
         view.setPadding(10, 10, 10, 10)
         view.text = text
         return view

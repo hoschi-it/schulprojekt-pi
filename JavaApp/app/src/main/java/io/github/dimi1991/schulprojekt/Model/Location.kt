@@ -5,9 +5,9 @@ class Location(
     @SerializedName("city")
     var City: String,
     @SerializedName("postal_code")
-    var PostalCode: String,
+    var PostalCode: String = "",
     @SerializedName("street")
-    var Street: String,
+    var Street: String = "",
     @SerializedName("room_no")
-    var RoomNumber: String
+    var RoomNumber: String = ""
 )

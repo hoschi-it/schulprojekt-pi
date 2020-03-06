@@ -47,20 +47,24 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         GlobalScope.launch {
-            loadTable()
+            loadTable(true)
         }
+
     }
 
-    private suspend fun loadTable(){
+    private suspend fun loadTable(isExampleData: Boolean){
         var url = "https://4b3aed5b-8e45-42a4-af81-64863036e153.mock.pstmn.io"
-        var provider = DataProvider(url)
+        var provider : DataProvider
+        var devices: List<Device>
 
-/*        var devs = listOf<Device>(
-            Device("FritzBox 12340", GregorianCalendar(2020, 20, 2), Location("Buxtehude")),
-            Device("Switch X", GregorianCalendar(2019, 7, 17), Location("Prag"))
-        )*/
-        val job = GlobalScope.async { provider.getAllDevices() }
-        val devices = job.await()
+        if(isExampleData){
+            provider = DataProvider(isExampleData = true)
+            devices = provider.getAllDevices()
+        } else {
+            provider  = DataProvider(url)
+            val job = GlobalScope.async { provider.getAllDevices() }
+            devices = job.await()
+        }
         makeRows(devices)
     }
 

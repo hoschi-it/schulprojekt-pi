@@ -1,23 +1,16 @@
 package io.github.dimi1991.schulprojekt
 
-import android.graphics.drawable.Drawable
 import android.os.Bundle
-import android.util.AttributeSet
-import android.util.Xml
 import android.view.Menu
 import android.view.MenuItem
-import android.view.ViewGroup
 import android.widget.TableRow
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.children
 import com.google.android.material.snackbar.Snackbar
 import io.github.dimi1991.schulprojekt.Model.Device
 import io.github.dimi1991.schulprojekt.Model.Location
-import io.github.dimi1991.schulprojekt.View.DeviceTable
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
-import org.xmlpull.v1.XmlPullParser
 import java.util.*
 
 
@@ -62,25 +55,18 @@ class MainActivity : AppCompatActivity() {
         MakeRows(devs)
     }
 
-
-
     fun MakeRows(devices: List<Device>) {
-        for(dev in devices) {
-            generateRow(dev)
+        for(device in devices) {
+            val tvDeviceName = generateTextView(device.Name)
+            val tvNextMaintenance = generateTextView(device.NextMaintenanceString())
+            val tvCity = generateTextView(device.Location.City)
+            var row = TableRow(devicesTable.context)
+            row.addView(tvDeviceName)
+            row.addView(tvNextMaintenance)
+            row.addView(tvCity)
+
+            devicesTable.addView(row, TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT))
         }
-    }
-
-    private fun generateRow(device: Device) {
-        val tvDeviceName = generateTextView(device.Name)
-        val tvNextMaintenance = generateTextView(device.NextMaintenanceString())
-        val tvCity = generateTextView(device.Location.City)
-        var row = TableRow(devicesTable.context)
-        row.addView(tvDeviceName)
-        row.addView(tvNextMaintenance)
-        row.addView(tvCity)
-
-        devicesTable.addView(row, TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT))
-
     }
 
     private fun generateTextView(text: String) : TextView {

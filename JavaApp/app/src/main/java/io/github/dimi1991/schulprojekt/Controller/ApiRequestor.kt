@@ -4,10 +4,13 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import java.net.URL
 
-class ApiRequestor(private var baseUrl: String) {
+class ApiRequestor(
+    private var baseUrl: String,
+    private val employeeNo: Int = 1
+) {
 
     public fun getDevices(): String {
-        return request("$baseUrl/devices.php")
+        return request("$baseUrl/Controller.php?goal=getAllDevices&employeeno=$employeeNo")
     }
 
     private fun request(requestUrl: String): String {

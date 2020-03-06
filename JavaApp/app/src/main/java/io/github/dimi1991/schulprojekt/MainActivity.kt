@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private suspend fun loadTable(isExampleData: Boolean){
-        var url = "https://4b3aed5b-8e45-42a4-af81-64863036e153.mock.pstmn.io"
+        var url = "localhost:8080/schulprojekt/Controller.php?goal=getAllDevices"
         var provider : DataProvider
         var devices: List<Device>
 
